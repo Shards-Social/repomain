@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import { setIsLoading } from "../../features/modalSlice";
 import { loginService } from "../../services/authServices";
 import DataList from "../DataList/DataList";
+import "./Login.css"; // Import the CSS file
 
 const Login = ({ setIsRegistering }) => {
 	const [email, setEmail] = useState("");

@@ -1,6 +1,7 @@
 import React from "react";
 import { logout } from "../../features/userSlice";
 import { useDispatch } from "react-redux";
+import "./Guest.css";
 
 const GradientBackground = () => {
 	return (
@@ -21,10 +22,10 @@ const Guest = () => {
 	return (
 		<article className="profilecard guest">
 			<GradientBackground />
-			<h2>Hello, Stranger</h2>
-			<p>Login to use the full features ✨</p>
+			<h2>You are not logged in!</h2>
+			<p>You must login to use all features</p>
 			<div className="btn-group">
-				<button onClick={gotoLogin}>Login</button>
+				<button onClick={gotoLogin}>Login/signup</button>
 			</div>
 		</article>
 	);
