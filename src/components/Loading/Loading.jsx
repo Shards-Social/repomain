@@ -4,29 +4,32 @@ import "./loading.css";
 
 let timeout;
 const controller = new AbortController();
-const initialQuote =
-	"Nothing can stop the man with the right mental attitude from achieving his goal; nothing on earth can help the man with the wrong mental attitude.";
 
 const Loading = ({ show }) => {
-	const [quote, setQuote] = useState(initialQuote);
+	const [quote, setQuote] = useState(""); // Change initialQuote to ""
+
 	const fetchQuote = async () => {
 		try {
-			const { data } = await axios.get("https://uselessfacts.jsph.pl/random.json?language=en", {
+			const { data } = await axios.get("", {
 				signal: controller.signal,
 			});
 			setQuote(data.text);
-		} catch (err) {}
+		} catch (err) {
+			// Handle errors if needed
+		}
 	};
+
 	useEffect(() => {
 		if (!show) {
 			fetchQuote();
 			timeout = setTimeout(() => {
 				setQuote(q => {
-					if (q !== initialQuote) return q;
-					return "Your internet is slower than my crushs reply :(";
+					if (q !== "408 session timeout") return q; // Return current quote if already fetched
+					return ""; // Set message for slow internet
 				});
 			}, 3000);
 		}
+
 		return () => {
 			clearTimeout(timeout);
 			controller.abort();
@@ -36,8 +39,8 @@ const Loading = ({ show }) => {
 	return (
 		<section className="loading">
 			<div className="loading__circle"></div>
-			<h2>Do you know?</h2>
-			<p>{quote}</p>
+			<h2>Loading</h2>
+			{quote && <p>{quote}</p>} {/* Only render the <p> if quote is not an empty string */}
 		</section>
 	);
 };
