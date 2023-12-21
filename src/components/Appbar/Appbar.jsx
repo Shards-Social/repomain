@@ -9,7 +9,7 @@ import { fetchUsersService } from "../../services/userServices";
 import { fetchPostsService } from "../../services/postServices";
 import "./appbar.css";
 import { logout } from "../../features/userSlice";
-import customHomeIcon from "../../assets/Shardslogo.png";
+import customHomeIcon from "../../assets/Shardslogoy.png";
 
 
 const Appbar = () => {
