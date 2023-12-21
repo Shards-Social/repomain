@@ -30,7 +30,7 @@ const ProfileCard = ({ id, isOwnProfile }) => {
 	dob = getDateString(dob);
 
 	const sendMessage = async () => {
-		if (isGuest) return dispatch(showModal({ msg: "You must be logged in to do this action!!" }));
+		if (isGuest) return dispatch(showModal({ msg: "Please log in to continue" }));
 		dispatch(setIsLoading(true));
 		dispatch(createChat({ customFetch, id })).then(() => {
 			if (window.innerWidth < 801) navigate("/chat/messenger");
