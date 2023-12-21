@@ -1,60 +1,57 @@
+/* online.css */
+
+/* Style for the section containing online and all users */
 .online {
-	height: 100%;
-	overflow: scroll;
-	background-color: var(--primary-500);
-	border-radius: 10px;
-	color: white;
-	scrollbar-width: none; /*to work in moz*/
-	padding: 2rem;
+	padding: 20px;
+  }
+  
+  /* Style for the headers */
+  h2 {
+	margin-bottom: 10px;
+  }
+  
+  /* Style for the user cards */
+  .user {
 	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-}
-
-.online::-webkit-scrollbar {
-	display: none;
-}
-
-.online h2 {
-	font-size: 1.1rem;
-	font-weight: 500;
-}
-
-.online .user {
-	position: relative;
-	display: flex;
-	color: white;
 	align-items: center;
-	gap: 1rem;
-	transition: transform 0.2s linear;
-}
-
-.user:not(.online-users .user):hover {
-	transform: translateX(10px);
-}
-
-.online img {
-	width: 2rem;
-}
-
-.online h3 {
-	font-weight: 500;
-	font-size: 0.8rem;
-}
-
-.online-users {
+	margin-bottom: 10px;
+	cursor: pointer;
+  }
+  
+  /* Style for the user card image */
+  .roundimage {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 10px;
+  }
+  
+  /* Style for the online user indicator */
+  .green {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: rgb(0, 241, 0);
 	display: flex;
-	gap: 0.5rem;
-	width: 100%;
-	overflow-x: auto;
-	flex-shrink: 0;
-	scrollbar-width: 0;
-}
-
-.online-users::-webkit-scrollbar {
-	display: none;
-}
-
-.online-users > * {
-	flex-shrink: 0;
-}
+	align-items: center;
+	justify-content: center;
+  }
+  
+  /* Adjustments for link styles */
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+/* Hover effect for user cards */
+.user {
+	/* Other styles for user cards */
+	transition: background-color 0.3s ease; /* Add a smooth transition effect */
+	border-radius: 5px; /* Setting border radius to 5px for all corners */
+  }
+  
+  .user:hover {
+	background-color: #4cd1fa; /* Changing background color on hover */
+  }
+  
