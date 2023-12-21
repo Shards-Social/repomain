@@ -9,6 +9,8 @@ import { fetchUsersService } from "../../services/userServices";
 import { fetchPostsService } from "../../services/postServices";
 import "./appbar.css";
 import { logout } from "../../features/userSlice";
+import customHomeIcon from "../../assets/Shardslogo.png";
+
 
 const Appbar = () => {
 	//global states
@@ -48,8 +50,8 @@ const Appbar = () => {
 				<img src={isSidebarVisible ? closeIcon : hamburger} alt="hamburger" />
 			</div>
 			<Link to="/">
-				<img src={homeIcon} alt="home" className="home-icon" />
-			</Link>
+  <img src={customHomeIcon} alt="home" className="home-icon" />
+</Link>
 			<form onSubmit={searchHandler} className="searchform">
 				<button type="submit" aria-label="search">
 					<img src={searchIcon} alt="search" />
