@@ -139,7 +139,7 @@ const Post = ({ singlepost, post }) => {
 					<div onClick={likeHandler}>{isLiked ? <AiFillHeart /> : <AiOutlineHeart />}</div>
 					<p>{getNumberOfLikes()}</p>
 				</div>
-				{singlepost || <Input placeholder={"Write a comment..."} handler={commentHandler} />}
+				{singlepost || <Input placeholder={"Comment"} handler={commentHandler} />}
 				<Link className={singlepost ? "comment__icon group" : "group"} to={`/post/${post._id}`}>
 					<BiCommentDetail />
 					<p>{post.comments.length}</p>

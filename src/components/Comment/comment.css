@@ -1,55 +1,90 @@
-.comment__group {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
+/* comment.css */
 
-.comment {
+.comment__group {
+	margin-bottom: 15px;
+  }
+  
+  .comment {
 	display: flex;
 	align-items: flex-start;
-	gap: 0.75rem;
-	color: white;
-}
-
-.comment a {
-	flex-shrink: 0;
-}
-
-.comment__dp {
-	width: 2rem;
-	aspect-ratio: 1;
+	margin-bottom: 10px;
+  }
+  
+  .comment__dp {
+	width: 30px;
+	height: 30px;
 	object-fit: cover;
 	border-radius: 50%;
-	position: relative;
-}
-
-.comment h3 {
-	font-size: 0.85rem;
-	font-weight: 500;
-}
-
-.comment__text {
-	font-size: 0.8rem;
-	line-height: 1.7em;
-	color: #bbbbbb;
-	overflow-wrap: anywhere;
-}
-
-.comment__text span {
+	margin-right: 10px;
+  }
+  
+  .comment h3 {
+	font-size: 1rem;
+	margin-bottom: 5px;
+  }
+  
+  .comment__text {
+	font-size: 0.9rem;
+	line-height: 1.4;
+	margin-top: 0;
+  }
+  
+  .comment__text span {
 	font-weight: bold;
-	color: white;
-}
-
-.replies {
-	padding-left: 5%;
-	margin-left: 5%;
-	border-left: 3px solid rgba(255, 255, 255, 0.123);
-}
-
-.replies .comment {
-	padding-block: 1rem;
-}
-
-.replies:has(.comment) {
-	margin-top: 1rem;
-}
+  }
+  
+  /* Style for options */
+  .options__container {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	z-index: 10;
+  }
+  
+  .option {
+	padding: 8px;
+	cursor: pointer;
+	font-size: 0.8rem;
+  }
+  
+  .option:hover {
+	background-color: #f0f0f0;
+  }
+  
+  /* Style for Input component */
+  .input__field {
+	width: calc(100% - 20px);
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	font-size: 0.9rem;
+  }
+  
+  /* Style for Confirmation */
+  .confirmation__modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+  }
+  
+  .confirmation__modal-content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add more styles as needed */
+  
