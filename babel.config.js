@@ -1,12 +1,15 @@
 module.exports = {
-    presets: [
-      ['@babel/preset-env', {
-        targets: 'defaults',
-        sourceType: 'module'
-      }]
+  presets: [
+    [
+      "@babel/preset-env",
+      {
+        targets: {
+          node: "current"
+        },
+        corejs: "3",
+        useBuiltIns: "usage"
+      }
     ],
-    plugins: [
-      '@babel/plugin-transform-modules-commonjs'
-    ]
-  };
-  
+    "@babel/preset-react" // Add this line if you're using React
+  ]
+};
