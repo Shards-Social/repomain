@@ -23,7 +23,7 @@ const initialState = {
 
 const handleGuest = (isGuest, dispatch) => {
 	if (isGuest) {
-		dispatch(showModal({ msg: "You must be logged in to do this action!!" }));
+		dispatch(showModal({ msg: "You must login to use all features" }));
 		return true;
 	}
 	return false;

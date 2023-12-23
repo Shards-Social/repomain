@@ -1,132 +1,67 @@
-.appbar {
-	display: flex;
-	align-items: center;
-	padding: 20px;
+/* Logo styles */
+.appbar__logo {
+	order: 1; /* Set the logo to appear first */
+	margin-right: 20px; /* Add some space between the logo and search bar */
   }
   
-  .appbar form {
-	display: flex;
-	align-items: center;
-	padding: 0.75rem 1.5rem;
-	background-color: var(--primary-500);
-	border-radius: 10px;
-	gap: 1rem;
-	position: relative;
-	text-align: center; /* Add this line to center the content */
+  .appbar__logo img {
+	max-width: 40px; /* Set a maximum width for the logo */
+	height: auto; /* Maintain aspect ratio */
   }
   
-
-.appbar form button {
-	width: 40px;
-	cursor: pointer;
-}
-
-.appbar form input {
-	color: white;
-	width: 85%;
-}
-
-.appbar__profile {
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-	margin-left: auto;
-}
-
-.appbar__profile__dp {
-	width: 40px;
-	aspect-ratio: 1;
-	object-fit: cover;
-	border-radius: 50%;
-}
-.appbar__profile a {
-	height: 40px;
-}
-
-.appbar__profile__logout {
-	width: 22px;
-	margin-bottom: 5px;
-}
-
-.appbar .close {
-	transform: scale(1.5);
-	aspect-ratio: 1;
-}
-
-.hamburger {
-	display: none;
-	width: 22px;
-}
-
-.home-icon {
-	width: 30px;
-	transform: translateY(-2px);
-}
-
-.hamburger > img {
-	width: 100%;
-}
-
-.appbar__profile .chat {
-	height: 85%;
-}
-
-.appbar a {
+/* Search bar and buttons */
+.appbar__search {
 	display: flex;
 	align-items: center;
-}
-
-.appbar .login-btn {
-	background-color: var(--primary-600);
-	padding: 0.75rem 1.5rem;
-	color: white;
-	border-radius: 10px;
-}
-
-@media (max-width: 800px) {
-	.appbar {
-		gap: 0.5rem;
-	}
-	.appbar form {
-		padding: 0.75rem;
-		flex: 1;
-	}
-	.hamburger {
-		display: flex;
-		align-items: center;
-	}
-	.appbar__profile {
-		gap: 1rem;
-	}
-	.home-icon {
-		display: none;
-	}
-}
-
-
-
-.searchform {
-	flex: 1;
+	justify-content: space-between;
+	width: 60%; /* Set a width percentage for the search bar container */
+	margin: 0 auto; /* Center the search bar container */
+	/* Add the following to ensure it's a flex container */
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+  }
+  
+  
+  .button-left,
+  .button-right {
+	padding: 8px 12px;
+	/* Add any other styling you need for your buttons */
+  }
+  
+  .searchform {
 	display: flex;
-	max-width: 600px; /* Adjust the max-width as needed */
-	margin: 0 auto; /* Center the search form */
 	align-items: center;
-	background-color: #fff;
-	border-radius: 20px;
-	padding: 5px 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex-grow: 1;
+	margin: 0 10px; /* Adjust margin as needed */
   }
   
   .searchform input[type="text"] {
-	flex: 1;
-	border: none;
-	outline: none;
+	flex: 1; /* Use the available space in the search bar container */
 	padding: 8px;
+	border: 1px solid #ccc; /* Add your preferred border style */
+	border-radius: 4px;
   }
   
   .searchform button {
-	border: none;
-	background: none;
-	cursor: pointer;
-	padding: 5px;
+	padding: 8px;
+	/* Add any other styling you need for your search button */
+  }
+  
+ 
+.appbar__profile {
+	position: absolute;
+	top: 0;
+	right: 0;
+  }
+  
+  .login-btn {
+	/* Add styles for the login button */
+	margin-left: auto;
+	padding: 8px 12px;
+	/* Add any other styling you need for the login button */
+  }
+  
+  .appbar {
+	position: relative; /* Ensure the header is set to a position other than static */
   }

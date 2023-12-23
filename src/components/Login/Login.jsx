@@ -42,15 +42,15 @@ const Login = ({ setIsRegistering }) => {
 			<input
 				type="password"
 				id="login-password"
-				placeholder="Top secret"
+				placeholder="Password"
 				value={password}
 				onChange={e => setPassword(e.target.value)}
 			/>
-			<button type="submit">Login</button>
+			<button type="Enter">Login</button>
 			<p>
 				Don't have an account? <br />
 				<span onClick={() => setIsRegistering(true)}>Register</span> or{" "}
-				<span onClick={guestHandler}>Continue as a guest</span>
+				<span onClick={guestHandler}>Browse signed out</span>
 			</p>
 		</form>
 	);
