@@ -87,13 +87,13 @@ const Appbar = () => {
   
 	  <div className="appbar__search">
 		<button className="button-left" onClick={handleLeftButton1}>
-		  Button 1
+		  Home
 		</button>
 		<button className="button-left" onClick={handleLeftButton2}>
-		  Button 2
+		  Videos
 		</button>
 		<button className="button-left" onClick={handleLeftButton3}>
-		  Button 3
+		 Fourms
 		</button>
   
 	
@@ -117,13 +117,13 @@ const Appbar = () => {
   
 		
 		<button className="button-right" onClick={handleRightButton1}>
-		  Button 4
+		  Notifications
 		</button>
 		<button className="button-right" onClick={handleRightButton2}>
-		  Button 5
+		  Likes
 		</button>
 		<button className="button-right" onClick={handleRightButton3}>
-		  Button 6
+		  Messages
 		</button>
 	  </div>
 
