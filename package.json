@@ -1,5 +1,5 @@
 {
-	"name": "shards",
+	"name": "Shards",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -16,6 +16,7 @@
 		"react-icons": "^4.4.0",
 		"react-redux": "^7.2.6",
 		"react-router-dom": "^6.4.2",
+		"react-scripts": "4.0.3",
 		"react-topbar-progress-indicator": "^4.1.1",
 		"socket.io-client": "^4.2.0"
 	},
@@ -40,8 +41,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"react-scripts": "^5.0.1"
 	}
 }
