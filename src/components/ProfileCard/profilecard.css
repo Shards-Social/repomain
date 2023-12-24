@@ -1,115 +1,83 @@
 /* profilecard.css */
 
+/* Basic styles */
 .profilecard {
-	position: relative;
-	width: 100%;
-	max-width: 400px;
+	width: 300px;
+	background-color: #ffffff0c;
+	border: 1px solid #0aa87448;
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	margin: 0 auto;
 	padding: 20px;
-	background: linear-gradient(to right, #4facfe, #00f2fe);
-	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	color: #fff;
   }
   
+  /* Header styles */
   .profilecard header {
 	text-align: center;
   }
   
-  .profilecard header img {
+  .profilecard header .profilecard__dp {
 	width: 100px;
 	height: 100px;
-	object-fit: cover;
 	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+	border: 2px solid #ccc;
   }
   
-  .profilecard h1, .profilecard h2 {
-	margin: 10px 0;
+  .profilecard header h1 {
+	font-size: 1.2em;
+	margin-bottom: 5px;
   }
   
+  .profilecard header h2 {
+	font-size: 1em;
+	color: #666;
+	margin-bottom: 15px;
+  }
+  
+  /* Article styles */
   .profilecard article {
-	margin-top: 20px;
+	margin-top: 15px;
   }
   
-  .profilecard__info {
+  .profilecard .profilecard__info {
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
   }
   
-  .profilecard__info img {
+  .profilecard .profilecard__info img {
 	width: 20px;
+	height: 20px;
 	margin-right: 10px;
   }
   
-  .btn-group {
+  .profilecard .btn-group {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 20px;
   }
   
-  .btn-group button {
-	padding: 10px 20px;
-	font-size: 14px;
+  .profilecard .btn-group button {
+	padding: 8px 16px;
 	border: none;
 	border-radius: 5px;
+	font-size: 0.9em;
 	cursor: pointer;
   }
   
-  .btn-group button:first-child {
-	background-color: #ff5e3a;
-	color: #fff;
-  }
   
-  .btn-group button:last-child {
-	background-color: #00f2fe;
-	color: #fff;
-  }
   
-  .gradient-border {
-	border: 2px solid;
-	border-image-slice: 1;
-	border-width: 2px;
-	border-image-source: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  }
-  
-  .roundimage {
-	border-radius: 50%;
-  }
-  
-  .dp-upload {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background-color: #00f2fe;
-	padding: 5px;
-	border-radius: 50%;
-	cursor: pointer;
-  }
-  
+  /* Icon hover effect */
   .dp-upload img {
-	width: 20px;
-	height: 20px;
-	object-fit: cover;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
   }
   
-  /* Additional Styles for Backdrop */
-  .backdrop {
-	background: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .backdrop-content {
-	background: #fff;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .dp-upload img:hover {
+	transform: scale(1.1);
   }
   

@@ -15,7 +15,7 @@ const Online = () => {
     
     return (
         <section className="online">
-            <h2>Something will go here </h2>
+            
          
         </section>
     );
