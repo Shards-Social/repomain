@@ -80,8 +80,8 @@ const Post = ({ singlepost, post }) => {
 				? post.likes?.length - 1 === 0
 					? "You"
 					: post.likes?.length - 1 === 1
-					? "You and 1 more"
-					: `You and ${post.likes.length - 1} others`
+					? "You & 1 more"
+					: `You & ${post.likes.length - 1} others`
 				: post.likes?.length;
 		}
 		return "";

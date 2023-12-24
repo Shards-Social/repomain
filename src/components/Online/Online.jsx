@@ -12,28 +12,11 @@ const Online = () => {
 
     const dispatch = useDispatch();
 
-    const allUsers = () => {
-        return users.map(user => (
-            <Link to={`/user/${user._id}`} key={user._id} onClick={() => dispatch(toggleSidebar(false))}>
-                <div className="user">
-                    <div>
-                        <img
-                            src={user.profileImage || dp}
-                            loading="lazy"
-                            alt={user.name + " image"}
-                            className="roundimage"
-                        />
-                    </div>
-                    <h3>{user.name}</h3>
-                </div>
-            </Link>
-        ));
-    };
-
+    
     return (
         <section className="online">
-            <h2>All Users - {users.length}</h2>
-            {allUsers()}
+            <h2>Something will go here </h2>
+         
         </section>
     );
 };

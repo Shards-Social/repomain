@@ -9,8 +9,8 @@
 	height: auto; /* Maintain aspect ratio */
   }
   
-/* Search bar and buttons */
-.appbar__search {
+  /* Search bar and buttons */
+  .appbar__search {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -21,7 +21,8 @@
 	flex-shrink: 0;
 	flex-basis: auto;
   }
-  
+
+
   
   .button-left,
   .button-right {
@@ -48,11 +49,28 @@
 	/* Add any other styling you need for your search button */
   }
   
- 
-.appbar__profile {
+  .appbar__profile {
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: 0;
 	right: 0;
+  }
+  
+  .appbar__profile__buttons {
+	display: flex;
+	align-items: center;
+  }
+  
+  .button-right {
+	margin-left: 10px; /* Adjust margin between buttons */
+  }
+  
+  .appbar__profile__dp {
+	width: 40px; /* Adjust width of the profile picture */
+	height: 40px; /* Adjust height of the profile picture */
+	border-radius: 50%; /* Maintain circular shape */
+	margin-left: 10px; /* Add margin between Messages button and pfp */
   }
   
   .login-btn {
@@ -65,3 +83,5 @@
   .appbar {
 	position: relative; /* Ensure the header is set to a position other than static */
   }
+  
+

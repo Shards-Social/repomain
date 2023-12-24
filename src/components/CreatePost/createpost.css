@@ -1,83 +1,98 @@
+/* createpost.css */
+
+/* Style for the article container */
 .createpost {
-	background-color: var(--primary-500);
-	padding: 2rem 1rem;
-	border-radius: 10px;
-}
-
-.createpost textarea {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	width: 100%;
-	height: 100px;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(3, 177, 110, 0.1);
+  }
+  
+  /* Style for the textarea */
+  .createpost textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 	resize: none;
-	color: white;
-	font-size: 1rem;
-	background-color: var(--primary-600);
-	border-radius: 10px;
-	padding: 1rem;
-}
-
-.createpost button,
-label div {
-	background-color: rgba(255, 255, 255, 0.158);
-	width: 50px;
-	aspect-ratio: 1;
-	border-radius: 50%;
+	font-size: 16px;
+  }
+  
+  /* Style for the uploaded image container */
+  .uploaded-image {
 	position: relative;
-}
-
-input[type="file"] {
-	display: none;
-}
-
-label div img,
-.createpost button img {
-	height: 20px;
+	margin-bottom: 15px;
+  }
+  
+  .uploaded-image img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+  }
+  
+  .close-icon {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-45%, -50%);
-}
-
-label div {
+	top: 5px;
+	right: 5px;
 	cursor: pointer;
-}
-
-.btns {
-	margin-top: 1rem;
+  }
+  
+  /* Style for the file input and button container */
+  .btns {
 	display: flex;
-	gap: 1rem;
-	width: max-content;
-	margin-left: auto;
-}
-
-.uploaded-image {
-	width: 100%;
-	border-radius: 10px;
-	overflow: hidden;
-	position: relative;
-}
-
-.uploaded-image img {
-	width: 100%;
-}
-
-.uploaded-image .close-icon {
-	position: absolute;
-	right: 1rem;
-	top: 1rem;
-	background-color: var(--primary-500);
-	height: 30px;
-	aspect-ratio: 1;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .btns label,
+  .btns button {
+	background-color: #00bb4e73;
+	border: none;
 	border-radius: 50%;
-	display: grid;
-	place-content: center;
+	padding: 10px;
 	cursor: pointer;
-}
+	transition: background-color 0.3s ease;
+  }
+  
+  .btns label:hover,
+  .btns button:hover {
+	background-color: #00bb4e73;
+  }
+  
+  .btns label img,
+  .btns button img {
+	width: 24px;
+	height: 24px;
+  }
+  
+  /* Hide the input file element */
+  input[type="file"] {
+	display: none;
+  }
+  
 
-@media (max-width: 800px) {
+
+  /* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
 	.createpost {
-		padding: 1rem;
+	  padding: 10px;
 	}
-}
+  
+	.createpost textarea {
+	  font-size: 14px;
+	}
+  
+	.btns label,
+	.btns button {
+	  padding: 8px;
+	}
+  
+	.btns label img,
+	.btns button img {
+	  width: 20px;
+	  height: 20px;
+	}
+  }
