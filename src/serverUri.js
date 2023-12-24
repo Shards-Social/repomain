@@ -1,3 +1,3 @@
-export default process.env.NODE_ENV === "Development"
+export default process.env.NODE_ENV === "development"
 	? "http://localhost:5000"
-	: "https://repomain.vercel.app/";
+	: "http://localhost:3000/";
