@@ -1,0 +1,2 @@
+(this.webpackJsonpshards=this.webpackJsonpshards||[]).push([[11],{202:function(t,e,c){},208:function(t,e,c){"use strict";c.r(e);c(1);var n=c(6),s=(c(202),c.p+"static/media/caterror.cbd1696d.png"),r=c(2);e.default=function(){var t=Object(n.o)();return Object(r.jsxs)("div",{className:"notfound",children:[Object(r.jsx)("img",{src:s,alt:"Cat Error"})," ",Object(r.jsx)("h1",{children:"404 the requested page was not Found"}),Object(r.jsx)("button",{onClick:function(){return t("/")},children:"Head back Home"})]})}}}]);
+//# sourceMappingURL=11.1714e82d.chunk.js.map
