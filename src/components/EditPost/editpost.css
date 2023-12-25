@@ -4,6 +4,8 @@
 	overflow: scroll;
 	border-radius: 10px;
 	scrollbar-width: 0;
+	background-color: #1f1f25;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .editPost::-webkit-scrollbar {

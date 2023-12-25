@@ -30,7 +30,7 @@ const Home = () => {
 
 	return (
 		<section className="home">
-			<div className="home__left">{isGuest ? <Guest /> : <ProfileCard id={id} isOwnProfile />}</div>
+			
 			<InfinityScroll getNextPage={getNextPage}>
 				<main className="home__center">
 					{isGuest || <CreatePost />}

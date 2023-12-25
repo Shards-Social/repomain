@@ -1,6 +1,6 @@
 .singlepost {
 	display: flex;
-	justify-content: center;
+	justify-content: center; /* Center horizontally */
 	margin-top: 140px; /* Increase or decrease this value to adjust the distance */
 	font-family: Arial, sans-serif;
   }
@@ -10,15 +10,13 @@
 	margin-right: 20px;
 	box-shadow: 0 0 10px rgba(3, 201, 118, 0.26);
 	border-radius: 8px;
-
 	padding: 20px;
   }
+  
   .singlepost__comments {
 	margin-top: 20px;
   }
   
-
-
   .post {
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 20px;
@@ -42,3 +40,4 @@
 	/* Move the username to the left */
 	flex-grow: 1; /* To push the username to the left */
   }
+  

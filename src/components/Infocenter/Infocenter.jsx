@@ -1,326 +1,262 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import './Infocenter.css'; // Replace 'infocenter.css' with your actual CSS file name and path
 
-function Infocenter() {
-  const [popups, setPopups] = useState(new Array(5).fill(false));
+const InfoCenter = () => {
+  const [selectedButton, setSelectedButton] = useState(null);
 
-  const openPopup = (index) => {
-    const newPopups = [...popups];
-    newPopups[index] = true;
-    setPopups(newPopups);
-  };
-
-  const closePopup = (index) => {
-    const newPopups = [...popups];
-    newPopups[index] = false;
-    setPopups(newPopups);
-  };
-
-
-  const popupContents = [
+  const buttonData = [
     {
-      title: "Terms & Conditions",
-      content: (
-        <div>
-        
-        <p>
-          These are the terms and conditions governing the use of Shards, (the Service) and the agreement that operates between us and you (the Terms). (us/our/we) and these Terms set out the rights and obligations of all users (you/your) in relation to your use of the Website.
-        </p>
-        <p>
-          By using the Website, you are consenting to be bound by the current Terms and our Privacy Statement. We may revise the Terms and information contained on the Website at any time and without notice. If you do not agree to these Terms or the Privacy Statement, please refrain from using the Website.
-        </p>
-        <p>
-          If you have any questions about the Terms or the Privacy Statement, please contact us through email <a href="mailto:Help@ShardsSocial.com">Help@ShardsSocial.com</a>.
-        </p>
-        <p><strong>Conduct of Use</strong></p>
-        <ul>
-          <li>You are not allowed to use this website in any way that is unlawful, abusive, threatening, harassing, obscene, libelous, hateful, or in any other way that will violate these terms and conditions.</li>
-          <li>Please review our Rules and Policies which are part of our User Agreement and outline what is and isn't allowed on our Services. You may use the Services only in compliance with our Terms and all applicable laws, rules, and regulations.</li>
-        </ul>
-        <p><strong>Liability</strong></p>
-        <ul>
-          <li>The material contained within Shards is provided without any guarantees. Your usage or reliance on any Content or materials posted through our Services or obtained from them is entirely at your own risk. We do not endorse, support, represent, or guarantee the completeness, truthfulness, accuracy, or reliability of any Content or communications posted via the Services, nor do we endorse any opinions expressed through them.</li>
-        </ul>
-        <p><strong>Limits of Use</strong></p>
-        <ul>
-          <li>Please review our Rules and Policies which are part of our User Agreement and outline what is and isn't allowed on our Services. You may use the Services only in compliance with our Terms and all applicable laws, rules, and regulations.</li>
-        </ul>
-        <p><strong>Changes to Terms</strong></p>
-        <ul>
-          <li>We are committed to ensuring that our website is as useful and efficient as possible. For that reason, we reserve the right to make changes to the services, at any time. We will never charge you for any service without making it very clear to you precisely what you're paying for.</li>
-          <li>You can always review the most current version of the Terms and conditions at any time on this page. We reserve the right to update, change, or retrieve any part of these Terms and Conditions by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</li>
-        </ul>
-        <p><strong>Personal Information</strong></p>
-        <ul>
-          <li>Your submission of personal information to Shards is regulated by our Privacy Policy. You are to view our Privacy Policy.</li>
-        </ul>
-        <p><strong>IFRAMES</strong></p>
-        <ul>
-          <li>Without prior approval and written permission, you may not create frames around our web pages that alter in any way the visual presentation or appearance of our Website.</li>
-        </ul>
-        <p><strong>Indemnification</strong></p>
-        <ul>
-          <li>You agree to indemnify, protect, and hold harmless to Shards, subsidiaries, affiliates, partners, officers, directors, agents, contractors, license, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorney’s fees, made by any third party due to or arising out of your breach of these Terms and conditions or the documents they incorporate by reference or your infringement of any law or the rights of a third party.</li>
-        </ul>
-        <p><strong>Severability</strong></p>
-        <ul>
-          <li>In the event that any provision of these Terms and conditions is discovered to be unlawful, null, or unenforceable, such provision shall notwithstanding be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be viewed to be cut off from these Terms of Use, such determination shall not affect the credibility and enforceability of any other remaining provisions.</li>
-        </ul>
-        <p><strong>Entire Agreement</strong></p>
-        <ul>
-          <li>Our inability to exercise or enforce any right or provision of these Terms of Service shall not constitute a discharge of such right or provision.</li>
-          <li>These Terms of Use and any policies or operating rules posted by us on this website or with respect to the Service constitute the entire agreement and understanding between you and us and govern your use of the Service, pre-empt any prior or synchronous agreements, communications, and proposals, whether oral or written, between you and us.</li>
-        </ul>
-        <p><strong>Contact Information</strong></p>
-        <ul>
-          <li>If you would like to: access, correct, register a complaint, or simply want more information please contact us:</li>
-          <li>Email: <a href="mailto:Help@ShardsSocial.com">Help@ShardsSocial.com</a></li>
-          <li>Web: <a href="https://legal.ShardsSocial.com/contact">https://legal.ShardsSocial.com/contact</a></li>
-        </ul>
-      </div>
-    ),
+      id: 1,
+      title: 'Terms of Use',
+      content: `
 
+      📜 Terms of Use
 
+Welcome to Shards! These Terms of Use outline the rules and regulations for using our platform.
 
+    Responsibility and Conduct
 
+       - Users must engage respectfully and responsibly within the platform community.
+       - Compliance with community guidelines, local laws, and regulations is mandatory.
+       - Any abusive, harassing, or offensive behavior towards others is strictly prohibited.
+
+    Content Ownership and Usage
+
+        - All content shared or posted on this platform remains the intellectual property of the respective creators.
+        - Users agree not to infringe upon any copyright, trademark, or intellectual property rights.
+        - Sharing or using content from this platform requires proper attribution to the original creator.
+
+    Accuracy and Reliability of Information
+
+        - While we strive for accuracy, we do not guarantee the completeness or reliability of the information shared by users.
+        - Users are encouraged to verify the accuracy of any information before relying on it.
+
+    Privacy and Data Handling
+
+        - Your privacy matters, Our Privacy Policy governs the collection, use, and protection of your personal information.
+        - By using this platform, users consent to the processing of their data as described in our Privacy Policy.
+
+    Changes to Terms of Use
+
+        - We reserve the right to modify or update these Terms of Use at any time without prior notice.
+        - Continued use of the platform constitutes acceptance of these changes.
+
+    Termination of Access
+
+        - Violation of these Terms of Use may result in the termination of a user's access to the platform without notice.
+
+By accessing or using our platform, you acknowledge that you have read, understood, and agreed to abide by these Terms of Use,
+if you dont agree with any of the above please refrain from using the Platform.`
     },
     {
-      title: "Privacy Policy",
-      content: (
-        <div>
- <p>
-          Not Created Yet
-        </p>
-        
-        </div>
-      ),
+      id: 2,
+      title: 'Privacy Policy',
+      content: `🔒 Privacy Policy
+
+      Welcome to [Platform Name]! This Privacy Policy outlines how we collect, use, and protect your personal information when you use our platform.
+      
+          Information Collection
+
+              We collect personal information when you register, create a profile, or interact with our platform's features.
+              Information may include your name, email address, profile picture, and any data voluntarily shared while using our services.
+      
+          Usage of Information
+
+              Personal information is used to provide and personalize our services, improve user experience, and communicate with users.
+              We may use collected data to send updates, newsletters, or important notifications related to our platform.
+      
+          Information Sharing
+
+              Your personal information is not shared, sold, or rented to third parties without your consent, except as required by law or for essential platform operations.
+              We may disclose information to service providers assisting in platform maintenance, subject to confidentiality agreements.
+      
+          Data Security
+
+              We implement security measures to protect against unauthorized access, alteration, disclosure, or destruction of personal information.
+              However, no method of transmission over the internet or electronic storage is completely secure; therefore, absolute security cannot be guaranteed.
+      
+          Cookies and Tracking
+
+              We may use cookies or similar tracking technologies to enhance user experience, gather data about site traffic, and understand user preferences.
+              Users can manage cookie preferences or disable them through browser settings.
+      
+          Third-Party Links
+
+              Our platform may contain links to third-party websites. We are not responsible for their privacy practices and encourage users to review their policies.
+      
+          Policy Updates
+
+              We reserve the right to update or modify this Privacy Policy. Any changes will be posted on this page with an updated effective date.
+      
+      By using our platform, you acknowledge that you have read, understood, and agreed to the terms outlined in this Privacy Policy. `,
     },
     {
-      title: "What do the verified badges mean?",
-      content: (
-        <div>
-        <hr></hr>
-      <p><strong>Notability Verification Badge</strong></p>
-      <ul>
-      <li>This verification is for people or  who have notability, 25k or more followers on Shards. 
-Or 60k or more followers on other platforms (YouTube, Instagram etc.)</li>
-      </ul>
+      id: 3,
+      title: 'Community Guidelines',
+      content: `🤝 Community Guidelines
 
-      <hr></hr>
-      <p><strong>Human Verification Badge</strong></p>
-      <ul>
-      <li>This verification can Help differentiate a Human from a bot or scammer etc, 
-To receive this verification a valid phone number along with regular account activity in the past 10 days is required.</li>
-      </ul>
+      Welcome to Shards! These Community Guidelines are designed to foster a safe and respectful environment for all users.
+      
+          Respect and Civility
 
-      <hr></hr>
-      <p><strong>Business/organization Verification Badge</strong></p>
-      <ul>
-      <li>This verification is for business and organizations, Businesses and organizations must have 1k or more followers on shards or any other platform to qualify, some exceptions may apply</li>
-      <li>Business and organizations will also need to provide a public business address, Businesses and organizations can only be verified by a employee who has been verified by the company.</li>
-      </ul>
-      <hr></hr>
-<p>
-       If you think that an account has violated rules or might be a bot or fake account 
-please Submit a claim at https://report.Shardssocial.com </p>
+              Treat fellow users with respect, kindness, and consideration.
+              Harassment, hate speech, bullying, or discrimination of any form will not be tolerated.
+      
+          Content Standards
 
-      </div>
-      ),
+              Ensure your posts and interactions are appropriate for all audiences.
+              Avoid sharing content that contains violence, nudity, explicit language, or promotes illegal activities.
+      
+          Intellectual Property and Copyright
+
+              Respect the intellectual property rights of others; do not post copyrighted material without proper authorization.
+              Provide credit and attribution when sharing content that isn’t your own.
+      
+          Privacy and Confidentiality
+
+              Respect others' privacy; do not share personal information without consent.
+              Refrain from disclosing private or confidential information about others.
+      
+          Reporting and Moderation
+
+              Report any content or behavior that violates these guidelines or makes you feel uncomfortable.
+              Our moderation team will review reported content and take necessary actions to maintain a safe environment.
+      
+          Consequences of Violations
+
+              Violation of these guidelines may result in content removal, account suspension, or permanent ban, depending on the severity of the offense.
+      
+          Promotion and Spam
+
+              Avoid spamming or repeatedly promoting unrelated content or products.
+              Commercial solicitation or advertising without permission is not allowed.
+      
+          Policy Updates
+
+              We reserve the right to update or modify these Community Guidelines. Users will be informed about significant changes.
+      
+      By using Shards, you acknowledge and agree to adhere to these Community Guidelines.`,
     },
     {
-      title: "Content Policies",
-      content: (
-        <div>
-           <p>
-           Shards Social is a community-driven platform for creating and sharing content. We aim to keep a safe and friendly environment for everyone. To keep our platform a safe place for everyone, we have a set of rules and guidelines for content creators and users. A comprehensive list of what is not allowed is written here.
-        </p>
-        <hr></hr>
-        <p><strong>Violence</strong></p>
-        <p> &nbsp; &nbsp; Extremely violent content is strictly prohibited. This includes, but is not limited to:</p>
-        <ul>
-          <li>Human organs and body parts being removed</li>
-          <li>The showing of Human death or malicious animal death (talking on the subject related to news or awareness is ok)</li>
-          <li>Excessive violence and/or physical harm such as a human being being shot or stabbed</li>
-          <li>Animal abuse such as a dog being beaten or abused</li>
-          <li>Child abuse such as a child being beaten or abused (further legal action may be taken by  our moderation team)</li>
-        </ul>
-<p>
-&nbsp; &nbsp; If our moderation AI detects that a user has violated this rule, your video will be denied. If your video is rated extremely violent, you will not be allowed to appeal it to our human moderation team. Even if your video is not explicitly banned, we may still warn viewers that your video contains violent content.</p>
+      id: 4,
+      title: 'Content Guidelines',
+      content: `📄 Content Guidelines
 
+      Content shared on our platform should align with the following guidelines to maintain a positive and inclusive environment for all users:
+      
+          Relevance and Context
 
-        <hr></hr>
-        <p><strong>Hate Content</strong></p>
-        <p> &nbsp; &nbsp;  Hate content is not allowed. This includes, but is not limited to:</p>
-        <ul>
-        <li>Threats of violence of any kind</li>
-          <li>Extreme toxicity</li>
-          <li>Slurs or extremely offensive comments</li>
-        </ul>
+              Ensure your content is relevant to the platform's purpose and community interests.
+              Provide context or descriptions that help others understand your content.
+      
+          Respectful Communication
 
+              Engage in constructive and respectful discussions with other users.
+              Avoid inflammatory, offensive, or disrespectful language or imagery.
+      
+          Accuracy and Authenticity
 
-        <hr></hr>
-        <p><strong>Nudity</strong></p>
-        <p> &nbsp; &nbsp;  Nudity is strictly prohibited. This includes human, animal, and drawn images of nudity. This includes, but is not limited to:</p>
-        <ul>
-        <li>Human genitalia</li>
-          <li>Intercourse or masturbation</li>
-          <li>Animal genitalia</li>
-          <li>Hentai</li>
-        </ul>
+              Share information that is accurate, factually correct, and verified from reliable sources.
+              Refrain from spreading false information or promoting misinformation.
+      
+          Sensitive and Mature Content
 
+              Clearly label content that might be sensitive, mature, or potentially triggering to others.
+              Respect individual preferences and consider using content warnings when necessary.
+      
+          Intellectual Property Rights
 
-        <hr></hr>
-        <p><strong>Drugs and alcohol</strong></p>
-        <p> &nbsp; &nbsp;  The consumption, sale, and making of any drugs is strictly prohibited on Shards, posting any of the listed will result in a 3 day ban </p>
-        
+              Respect copyright laws; only share content you have the right to use.
+              Provide proper attribution to original creators or sources when sharing third-party content.
+      
+          Safety and Harm Prevention
 
-        <hr></hr>
-        <p><strong>Exceptions</strong></p>
-        <p> &nbsp; &nbsp; Videos from creators such as news channels and blogs may post violent content, if it is under the context of informing the viewer of a situation that is very likely to be violent (such as a war, or a natural disaster). </p>
-        
+              Do not share content that promotes self-harm, violence, or illegal activities.
+              Report any content that may pose a threat or risk to individuals or the community.
+      
+          Advertising and Promotions
 
-        <hr></hr>
-        <p><strong>Other</strong></p>
-        <p> &nbsp; &nbsp;  We reserve the right to remove any content for any reason at any time without notice. </p>
+              Avoid excessive self-promotion or spamming.
+              Clearly distinguish promotional content and ensure it complies with our advertising policies.
+      
+          Compliance with Policies
 
-
-        <hr></hr>
-        <p><strong>Contact</strong></p>
-        <p> &nbsp; &nbsp;  If you have any questions about our content policies, please contact us by email at Contact@Shardssocial.com </p>
-
-
-
-        </div>
-      ),
+              Adhere to our platform's Terms of Use, Privacy Policy, and Community Guidelines.
+              Respect and follow any additional policies or rules specified by the platform.
+      
+      By adhering to these content guidelines, users contribute positively to our community and create a welcoming environment for everyone.`,
     },
     {
-      title: "Getting Started as a Creator",
-      content: (
-        <div>
-          <p>
-          Not Created Yet
-        </p>
-        </div>
-      ),
+      id: 5,
+      title: 'Data Policy',
+      content: `🔐 Data Policy
+
+      At Shards, we prioritize the protection and minimal use of your data. Our commitment is to safeguard your information and ensure transparency in its usage.
+      
+          Data Collection
+
+              We collect only the information necessary to provide and improve our platform services.
+              Data collection occurs when users voluntarily provide information or interact with our platform's features.
+      
+          Data Usage
+
+              We do not track, sell, or use any data not explicitly authorized or shared by the user for platform functionalities.
+              User-provided data is used solely to enhance user experience, personalize content, and improve our services.
+      
+          Advertising Policy
+
+              We do not sell or provide user information to advertisers.
+              Advertisements you encounter are related to the categories or interests you have chosen within the platform.
+      
+          Data Security
+
+              We employ industry-standard security measures to protect user data from unauthorized access, misuse, or alteration.
+              However, no method of data transmission over the internet is entirely secure; therefore, absolute security cannot be guaranteed.
+      
+          Third-Party Links and Services
+
+              Our platform may contain links to third-party websites or services. We are not responsible for their privacy practices and encourage users to review their policies.
+      
+          User Control and Consent
+
+              Users have control over their data and can manage privacy settings or opt-out of certain data processing.
+              Your continued use of the platform implies consent to the outlined data practices.
+      
+          Policy Updates
+
+              We reserve the right to update or modify this Data Policy. Any significant changes will be communicated to users through appropriate channels.
+      
+      Our commitment is to maintain the integrity and security of your data while ensuring a personalized and enjoyable experience on our platform.`,
     },
   ];
 
-  
-
+  const handleButtonClick = (buttonId) => {
+    setSelectedButton(selectedButton === buttonId ? null : buttonId);
+  };
 
   return (
-    <div>
-      <h1>Infocenter</h1>
-      <div className="top-buttons">
-        <button
-          style={{
-            width: 258,
-            height: 125,
-            marginBottom: '20px' // Add a 20px space below the button
-          }}
-          onClick={() => openPopup(0)}
-        >
-          Terms & Conditions
-        </button>
-        <button
-          style={{
-            width: 258,
-            height: 125,
-            marginBottom: '20px' // Add a 20px space below the button
-          }}
-          onClick={() => openPopup(1)}
-        >
-          Privacy Policy
-        </button>
-        <button
-          style={{
-            width: 258,
-            height: 125,
-            marginBottom: '20px' // Add a 20px space below the button
-          }}
-          onClick={() => openPopup(2)}
-        >
-          What do the verified badges mean?
-        </button>
-      </div>
-      <div className="bottom-buttons">
-        <button
-          style={{
-            width: 258,
-            height: 125,
-            marginBottom: '20px' // Add a 20px space below the button
-          }}
-          onClick={() => openPopup(3)}
-        >
-          Content policies
-        </button>
-        <button
-          style={{
-            width: 258,
-            height: 125,
-            marginBottom: '20px' // Add a 20px space below the button
-          }}
-          onClick={() => openPopup(4)}
-        >
-          Getting Started as a Creator
-        </button>
-      </div>
-
-      {popups.map((isOpen, index) =>
-        isOpen && (
-          ReactDOM.createPortal(
-            <div
-              className="popup-container"
-              style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                zIndex: 1000,
-              }}
-            >
-              <div
-                className="popup-content"
-                style={{
-                  position: 'absolute',
-                  top: '10%',
-                  left: '10%',
-                  right: '10%',
-                  bottom: '10%',
-                  backgroundColor: '#fff',
-                  padding: '20px',
-                  textAlign: 'left',
-                  overflow: 'auto',
-                  zIndex: 1001,
-                }}
-              >
-                <button
-                  onClick={() => closePopup(index)}
-                  style={{
-                    backgroundColor: '#ff5733',
-                    color: '#fff',
-                    border: 'none',
-                    padding: '10px 20px',
-                    cursor: 'pointer',
-                    position: 'absolute',
-                    top: '10px',
-                    right: '10px',
-                    zIndex: 1002,
-                  }}
-                >
-                  Close
-                </button>
-                <h2>{popupContents[index].title}</h2>
-                {popupContents[index].content}
-              </div>
-            </div>,
-            document.body
-          )
-        )
-      )}
+    <div className="info-center">
+      {buttonData.map((button) => (
+        <div key={button.id} className="info-button-container">
+          <button
+            className="info-button"
+            onClick={() => handleButtonClick(button.id)}
+          >
+            <div className="button-title">{button.title}</div>
+          </button>
+          <div className={selectedButton === button.id ? "info-menu show" : "info-menu"}>
+            <div className="menu-content">
+              <h2>{button.title}</h2>
+              <p>{button.content}</p>
+              <button className="close-button" onClick={() => setSelectedButton(null)}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
-}
-export default Infocenter;
+};
+
+export default InfoCenter;

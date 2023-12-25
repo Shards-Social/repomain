@@ -1,0 +1,139 @@
+/* infocenter.css */
+
+.info-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .info-button-container {
+    position: relative;
+  }
+  
+  .info-button {
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    width: 258px;
+    height: 125px;
+  }
+  
+  .button-title {
+    text-align: center;
+  }
+  
+  
+
+  .info-menu {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f1f25;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none;
+    width: 300px; /* Default width */
+    overflow-y: auto; /* Enable vertical scroll if content overflows */
+    max-height: 80vh; /* Limit maximum height to fit the viewport */
+    text-align: center; /* Center align text */
+  }
+  
+  .info-menu.show {
+    display: block;
+  }
+  
+  .menu-content {
+    position: relative;
+  }
+  
+  .menu-title {
+    margin-bottom: 20px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+
+  /* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .info-menu {
+      width: 900px; /* Adjust width for larger screens */
+      height: 600px;
+    }
+  }
+
+
+
+
+
+
+/* Styles for the content of the Terms of Use */
+.info-menu.show .menu-content {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0; /* Text color */
+    font-size: 16px;
+    line-height: 1.5; /* Line height for better readability */
+  }
+  
+  .info-menu.show .menu-title {
+    font-size: 20px; /* Title font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Spacing after the title */
+  }
+  
+  .info-menu.show .close-button {
+    background-color: #3498db; /* Close button background color */
+    color: #fff; /* Close button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Custom styles for the Terms of Use content */
+  .info-menu.show .menu-content {
+    white-space: pre-wrap; /* Preserve formatting */
+  }
+  
+  /* Scrollbar styles for the menu */
+  .info-menu.show {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: #3498db #fff; /* Color scheme for the scrollbar (track and thumb) */
+  }
+  
+  .info-menu.show::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar for webkit browsers */
+  }
+  
+  .info-menu.show::-webkit-scrollbar-track {
+    background: #fff; /* Track color */
+  }
+  
+  .info-menu.show::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Thumb color */
+    border-radius: 4px; /* Rounded corners for the thumb */
+  }

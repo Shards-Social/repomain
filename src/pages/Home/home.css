@@ -5,8 +5,10 @@
 	grid-template-columns: auto 2fr 1fr;
 	gap: 1rem;
 	position: relative;
+	padding-left: 5.3in; /* Add space of 7 inches on the left side */
 }
 
+/* Existing styles remain unchanged */
 .home__left {
 	min-width: 310px;
 	height: fit-content;

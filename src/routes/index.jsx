@@ -7,6 +7,8 @@ import Backdrop from "../components/Backdrop/Backdrop";
 import EditPost from "../components/EditPost/EditPost";
 import ProtectedRoute from "./ProtectedRoute";
 import ProgressBar from "react-topbar-progress-indicator";
+import Infocenter from "../components/Infocenter/Infocenter";
+
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const SinglePost = lazy(() => import("../pages/Singlepost/SinglePost"));
@@ -53,6 +55,7 @@ const Router = () => {
 				<Route path="/user/:id" element={<Profile />} />
 				<Route path="/chat" element={authenticate(Chat)} />
 				<Route path="/chat/messenger" element={authenticate(MessengerPage)} />
+				<Route path="/infocenter" element={<Infocenter />} /> {/* Add this route for Infocenter */}
 				<Route path="*" element={<NotFound />} />
 			</Route>
 		</Routes>
