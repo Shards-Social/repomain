@@ -16,7 +16,8 @@ const Login = ({ setIsRegistering }) => {
 	const loginHandler = async e => {
 		e.preventDefault();
 		dispatch(setIsLoading(true));
-		const data = await customFetch(loginService, { email, password });
+		const lowercaseEmail = email.toLowerCase(); // Convert email to lowercase
+		const data = await customFetch(loginService, { email: lowercaseEmail, password });
 		if (data) dispatch(login(data));
 		dispatch(setIsLoading(false));
 	};
@@ -46,7 +47,7 @@ const Login = ({ setIsRegistering }) => {
 				value={password}
 				onChange={e => setPassword(e.target.value)}
 			/>
-			<button type="Enter">Login</button>
+			<button type="submit">Login</button>
 			<p>
 				Don't have an account? <br />
 				<span onClick={() => setIsRegistering(true)}>Register</span> or{" "}

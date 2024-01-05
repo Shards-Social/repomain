@@ -1,3 +1,4 @@
+/* Existing styles for mobile */
 .home {
 	width: 100%;
 	margin-inline: auto;
@@ -5,10 +6,8 @@
 	grid-template-columns: auto 2fr 1fr;
 	gap: 1rem;
 	position: relative;
-	padding-left: 5.3in; /* Add space of 7 inches on the left side */
 }
 
-/* Existing styles remain unchanged */
 .home__left {
 	min-width: 310px;
 	height: fit-content;
@@ -53,5 +52,13 @@
 @keyframes spin {
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+
+/* New styles for desktop with additional space on the left side */
+@media (min-width: 801px) {
+	.home {
+		padding-left: 5.3in; /* Add space of 7 inches on the left side */
 	}
 }

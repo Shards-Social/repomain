@@ -14,7 +14,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 60%; /* Set a width percentage for the search bar container */
+	width: 35%; /* Set a width percentage for the search bar container */
 	margin: 0 auto; /* Center the search bar container */
 	/* Add the following to ensure it's a flex container */
 	flex-grow: 1;
@@ -84,4 +84,6 @@
 	position: relative; /* Ensure the header is set to a position other than static */
   }
   
-
+  input.white-placeholder::placeholder {
+    color: white;
+}

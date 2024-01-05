@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { dp, closeIcon, searchIcon, chatIcon } from "../../assets";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,8 +14,25 @@ import customHomeIcon from "../../assets/Shardslogoy.png";
 const Appbar = () => {
   const [query, setQuery] = useState("");
   const [searchResult, setSearchResult] = useState({});
+  const [greeting, setGreeting] = useState("");
+
   const dispatch = useDispatch();
   const customFetch = useFetch();
+
+  const getGreeting = () => {
+    const currentHour = new Date().getHours();
+    if (currentHour >= 5 && currentHour < 12) {
+      setGreeting("Good morning");
+    } else if (currentHour >= 12 && currentHour < 18) {
+      setGreeting("Good afternoon");
+    } else {
+      setGreeting("Good night");
+    }
+  };
+
+  useEffect(() => {
+    getGreeting();
+  }, []);
 
   const searchHandler = async (e) => {
     e.preventDefault();
@@ -58,6 +75,10 @@ const Appbar = () => {
         </Link>
       </div>
 
+      <div className="greeting">
+        {greeting}
+      </div>
+
       <div className="appbar__search">
         <form onSubmit={searchHandler} className="searchform">
           <button type="submit" aria-label="search">
@@ -65,7 +86,7 @@ const Appbar = () => {
           </button>
           <input
             type="text"
-            placeholder="Tap to search..."
+            placeholder="Search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />

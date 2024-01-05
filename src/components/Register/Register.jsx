@@ -16,7 +16,8 @@ const Register = ({ setIsRegistering }) => {
 	const registerHandler = async e => {
 		e.preventDefault();
 		dispatch(setIsLoading(true));
-		const data = await customFetch(registerService, form);
+		const lowercaseEmail = form.email.toLowerCase(); // Convert email to lowercase
+		const data = await customFetch(registerService, { ...form, email: lowercaseEmail }); // Use lowercase email
 		if (data) dispatch(login(data));
 		dispatch(setIsLoading(false));
 	};
